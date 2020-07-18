@@ -1,0 +1,22 @@
+name: KBase
+version: ${project.version}
+main: cc.fatenetwork.kbase.Base
+api-version: 1.16
+authors: [Hackusate_PvP]
+commands:
+  adventure:
+    aliases: [gma]
+  creative:
+    aliases: [gmc]
+  eat:
+    aliases: [food]
+  enderchest:
+    aliases: [echest]
+  hidestaff:
+    description: Hide all staff memebers in vanish.
+  staffmode:
+    aliases: [mod, hacker, h, modemode, staff]
+    description: Enter in staff util mode.
+  vanish:
+    aliases: [v, ev]
+    description: Hide from normal players.
