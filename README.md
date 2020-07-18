@@ -9,6 +9,9 @@ Supports 1.8
 ## Dependencies
 - LunarClient API ([LunarClientAPI](https://github.com/TewPingz/LunarClientAPI))
 
+## Documentation
+Documentation can be found [here](https://github.com/HackusatePvP/kBase/wiki)
+
 ---
 ### Compile a Build
 1. Navigate to the repository home directory
