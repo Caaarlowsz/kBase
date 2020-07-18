@@ -3,6 +3,8 @@ package cc.fatenetwork.kbase.staff;
 import cc.fatenetwork.kbase.Base;
 import org.bukkit.entity.Player;
 
+import java.util.Set;
+
 public class StaffAPI {
 
     public static boolean isStaff(Player player) {
@@ -19,5 +21,9 @@ public class StaffAPI {
 
     public static boolean hasStaffHidden(Player player) {
         return Base.getPlugin().getStaffManager().hasStaffHidden(player);
+    }
+
+    public static Set<Player> getStaffOnline() {
+        return Base.getPlugin().getStaffManager().getStaff();
     }
 }

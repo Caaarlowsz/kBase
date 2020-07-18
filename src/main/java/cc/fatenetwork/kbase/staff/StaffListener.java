@@ -5,6 +5,7 @@ import cc.fatenetwork.kbase.staff.events.StaffJoinEvent;
 import cc.fatenetwork.kbase.staff.events.StaffModeDisableEvent;
 import cc.fatenetwork.kbase.staff.events.StaffModeEnableEvent;
 import cc.fatenetwork.kbase.utils.ClientAPI;
+import cc.fatenetwork.kbase.utils.StringUtil;
 import lombok.SneakyThrows;
 import net.mineaus.lunar.api.LunarClientAPI;
 import net.mineaus.lunar.api.type.StaffModule;
@@ -74,6 +75,12 @@ public class StaffListener implements Listener {
         if (plugin.getStaffManager().isStaffMode(player)) {
             event.setCancelled(true);
         }
+    }
+
+    @EventHandler
+    public void onStaffJoin(StaffJoinEvent event) {
+        Player player = event.getPlayer();
+        StaffAPI.getStaffOnline().forEach(staff -> staff.sendMessage(StringUtil.format("&c" + player.getName() + " &7has joined the server.")));
     }
 
     @SneakyThrows
