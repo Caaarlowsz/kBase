@@ -18,3 +18,6 @@ Documentation can be found [here](https://github.com/HackusatePvP/kBase/wiki)
 2. Run ``mvn clean install``
 3. Find compiled jar at ``target/kBase-1.0-SNAPSHOT``
 ---
+
+## Release
+This release is not supported nor maintained, it was released to the public as educational purposes only.
