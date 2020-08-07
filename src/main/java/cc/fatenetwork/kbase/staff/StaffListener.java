@@ -20,8 +20,6 @@ import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import java.io.IOException;
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class StaffListener implements Listener {
@@ -88,7 +86,7 @@ public class StaffListener implements Listener {
     public void onStaffEnterEvent(StaffModeEnableEvent event) {
         Player player = event.getPlayer();
         if (ClientAPI.isClient(player)) {
-            ClientAPI.sendNotification(player, "You have entered staff mode.", 3, TimeUnit.SECONDS);
+            ClientAPI.sendNotification(player, "You have entered staff mode.", 3);
             LunarClientAPI.INSTANCE().toggleStaffModule(player, StaffModule.BUNNY_HOP, true);
             LunarClientAPI.INSTANCE().toggleStaffModule(player, StaffModule.NAME_TAGS, true);
             LunarClientAPI.INSTANCE().toggleStaffModule(player, StaffModule.XRAY, true);
@@ -101,7 +99,7 @@ public class StaffListener implements Listener {
     public void onStaffLeaveEvent(StaffModeDisableEvent event) {
         Player player = event.getPlayer();
         if (ClientAPI.isClient(player)) {
-            ClientAPI.sendNotification(player, "You have left staff mode.", 3, TimeUnit.SECONDS);
+            ClientAPI.sendNotification(player, "You have left staff mode.", 3);
             LunarClientAPI.INSTANCE().toggleStaffModule(player, StaffModule.BUNNY_HOP, true);
             LunarClientAPI.INSTANCE().toggleStaffModule(player, StaffModule.NAME_TAGS, true);
             LunarClientAPI.INSTANCE().toggleStaffModule(player, StaffModule.XRAY, true);

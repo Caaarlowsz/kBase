@@ -20,4 +20,4 @@ Documentation can be found [here](https://github.com/HackusatePvP/kBase/wiki)
 ---
 
 ## Release
-This release is not supported nor maintained, it was released to the public as educational purposes only.
+This release is not supported nor maintained, it was released to the public for educational purposes only.

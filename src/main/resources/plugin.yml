@@ -6,6 +6,8 @@ authors: [Hackusate_PvP]
 commands:
   adventure:
     aliases: [gma]
+  broadcast:
+    aliases: [bc]
   creative:
     aliases: [gmc]
   eat:
@@ -14,9 +16,11 @@ commands:
     aliases: [echest]
   hidestaff:
     description: Hide all staff memebers in vanish.
+  list:
   staffmode:
     aliases: [mod, hacker, h, modemode, staff]
     description: Enter in staff util mode.
   vanish:
     aliases: [v, ev]
     description: Hide from normal players.
+  gui:

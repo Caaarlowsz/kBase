@@ -1,13 +1,12 @@
 package cc.fatenetwork.kbase.utils;
 
+import lombok.SneakyThrows;
 import net.mineaus.lunar.api.LunarClientAPI;
-import net.mineaus.lunar.api.type.Notification;
 import net.mineaus.lunar.api.type.ServerRule;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 public class ClientAPI {
 
@@ -30,9 +29,9 @@ public class ClientAPI {
      * @param player Player
      * @param message String message (limit characters)
      * @param delay amount in seconds until notification disappears
-     * @throws IOException @SneakyThrows
      */
-    public static void sendNotification(Player player, String message, int delay) throws IOException {
+    @SneakyThrows
+    public static void sendNotification(Player player, String message, int delay) {
         LunarClientAPI.INSTANCE().sendNotification(player, message, delay);
     }
 
@@ -42,9 +41,9 @@ public class ClientAPI {
      * @param message String coodlown identifier
      * @param delay int delay in seconds until cooldown expires
      * @param icon Material of icon
-     * @throws IOException @SneakyThrows
      */
-    public static void sendCooldown(Player player, String message, long delay, Material icon) throws IOException {
+    @SneakyThrows
+    public static void sendCooldown(Player player, String message, long delay, Material icon) {
         LunarClientAPI.INSTANCE().sendCooldown(player, message, icon, delay);
     }
 
@@ -63,9 +62,9 @@ public class ClientAPI {
      *
      * @param player Player
      * @param targets Player[]
-     * @throws IOException @SneakyThrows
      */
-    public static void sendTeamMate(Player player, Player... targets) throws IOException {
+    @SneakyThrows
+    public static void sendTeamMate(Player player, Player... targets) {
         LunarClientAPI.INSTANCE().sendTeamMate(player, targets);
     }
 
@@ -76,7 +75,8 @@ public class ClientAPI {
      * @param everyone
      * @throws IOException @SneakyThrows
      */
-    public static void performEmote(Player player, int type, boolean everyone) throws IOException {
+    @SneakyThrows
+    public static void performEmote(Player player, int type, boolean everyone) {
         LunarClientAPI.INSTANCE().performEmote(player, type, everyone);
     }
 
@@ -90,7 +90,8 @@ public class ClientAPI {
      * @param s ?
      * @throws IOException @SneakyThrows
      */
-    public static void updateServerRule(Player player, ServerRule serverRule, boolean b, int i, float f, String s) throws IOException {
+    @SneakyThrows
+    public static void updateServerRule(Player player, ServerRule serverRule, boolean b, int i, float f, String s) {
         LunarClientAPI.INSTANCE().updateServerRule(player, serverRule, b, i, f, s);
     }
 
@@ -126,11 +127,13 @@ public class ClientAPI {
      * @param string New tag can be multiple lines
      * @throws IOException @SneakyThrows
      */
-    public static void updateNameTag(Player player, Player player1, String... string) throws IOException {
+    @SneakyThrows
+    public static void updateNameTag(Player player, Player player1, String... string) {
         LunarClientAPI.INSTANCE().updateNameTag(player, player1, string);
     }
 
-    public static void updateServerName(Player player, String server) throws IOException {
+    @SneakyThrows
+    public static void updateServerName(Player player, String server) {
         LunarClientAPI.INSTANCE().updateServerName(player, server);
     }
 

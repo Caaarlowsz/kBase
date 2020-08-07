@@ -9,17 +9,14 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 @Getter
 public class StaffManager {
-    private final Set<Player> staff = new HashSet<>();
-    private final Set<Player> vanish = new HashSet<>();
-    private final Set<Player> staffMode = new HashSet<>();
-    private final Set<Player> hideStaff = new HashSet<>();
+    private final List<Player> staff = new ArrayList<>();
+    private final List<Player> vanish = new ArrayList<>();
+    private final List<Player> staffMode = new ArrayList<>();
+    private final List<Player> hideStaff = new ArrayList<>();
     private final Map<Player, ItemStack[]> contents = new HashMap<>();
     private final Map<Player, ItemStack[]> armorContents = new HashMap<>();
 

@@ -12,7 +12,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionType;
 
-public class ChatUtil{
+public class ChatUtil {
+
 	public static String getName(net.minecraft.server.v1_8_R3.ItemStack stack){
 		NBTTagCompound nbttagcompound;
 		if(stack.getTag() != null && stack.getTag().hasKeyOfType("display", 10) && (nbttagcompound = stack.getTag() .getCompound("display")).hasKeyOfType("Name", 8)){

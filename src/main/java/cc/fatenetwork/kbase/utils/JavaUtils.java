@@ -83,6 +83,46 @@ public final class JavaUtils{
 		return result;
 	}
 
+	public static int parseInt(String input) {
+		if(input == null || input.isEmpty()){
+			return -1;
+		}
+		int result = 0;
+		StringBuilder number = new StringBuilder();
+		for(int i = 0; i < input.length(); ++i){
+			String str;
+			char c = input.charAt(i);
+			if(Character.isDigit(c)){
+				number.append(c);
+				continue;
+			}
+			if(!Character.isLetter(c) || (str = number.toString()).isEmpty()) continue;
+			result += JavaUtils.convert(Integer.parseInt(str), c);
+			number = new StringBuilder();
+		}
+		return result;
+	}
+
+	public static double parseDouble(String input) {
+		if(input == null || input.isEmpty()){
+			return -1;
+		}
+		double result = 0;
+		StringBuilder number = new StringBuilder();
+		for(int i = 0; i < input.length(); ++i){
+			String str;
+			char c = input.charAt(i);
+			if(Character.isDigit(c)){
+				number.append(c);
+				continue;
+			}
+			if(!Character.isLetter(c) || (str = number.toString()).isEmpty()) continue;
+			result += JavaUtils.convert(Integer.parseInt(str), c);
+			number = new StringBuilder();
+		}
+		return result;
+	}
+
 	private static long convert(int value, char unit){
 		switch(unit){
 			case 'y':{
